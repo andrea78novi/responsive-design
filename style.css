@@ -1,0 +1,87 @@
+:root {
+   --main-radius: 5px;
+   --main-padding: 15px;
+}
+
+.container {
+   color: #555;
+   display: grid;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   grid-gap: 0.2rem;
+   grid-template-areas:
+      "nav nav nav nav"
+      "aside main main main"
+      "aside content1 content2 content3"
+      "aside footer footer footer";
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+   height: 100vh;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+nav {
+   background-color: #a7ffeb;
+   border-radius: var(--main-radius);
+   grid-area: nav;
+   padding-top: var(--main-padding);
+}
+
+main {
+   background-color: #84ffff;
+   border-radius: var(--main-radius);
+   grid-area: main;
+   padding-top: var(--main-padding);
+}
+
+aside {
+   background-color: #18ffff;
+   border-radius: var(--main-radius);
+   grid-area: aside;
+   padding-top: var(--main-padding);
+}
+
+#content1 {
+   background-color: #6fffd2;
+   border-radius: var(--main-radius);
+   grid-area: content1;
+   padding-top: var(--main-padding);
+}
+
+#content2 {
+   background-color: #64ffda;
+   border-radius: var(--main-radius);
+   grid-area: content2;
+   padding-top: var(--main-padding);
+}
+
+#content3 {
+   background-color: #73ffba;
+   border-radius: var(--main-radius);
+   grid-area: content3;
+   padding-top: var(--main-padding);
+}
+
+footer {
+   background-color: #1de9b6;
+   border-radius: var(--main-radius);
+   grid-area: footer;
+   padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 550px) {
+   .container {
+      grid-template-areas:
+         "nav"
+         "aside"
+         "main"
+         "content1"
+         "content2"
+         "content3"
+         "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+   }
+}
